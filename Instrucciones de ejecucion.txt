@@ -1,0 +1,15 @@
+Instruciones para la ejecucion de la aplicacion de gestion de usuarios de el tiempo
+
+Si la base de datos no ha sido creada se debe hacer lo siguiente
+1. Ingresar al proyecto ApiRestElTiempo en el archivo appsettings.json verificar la clave
+ConnectionString debe corresponder a la conexion de base de datos que tenga en su equipo ya sea de manera local
+
+Cuando se tenga configurada la base de datos con su respectiva conexion en el archivo appsettings
+se debe ingresar a la opcion de visual studio en Herramientas, administrador de paquetes NuGet y luego 
+consola de administracion de paquetes, se abre la consola en la parte inferior, luego de esto se debe seleccionar
+el proyecto en el cual se ejecutara la migracion de base de datos, en este caso el proyecto se 
+llama infraestructure, luego de seleccionarlo en la consola digitamos el comando
+Add-Migration initial y lo ejecutamos con enter, seguidamente de que el comando finalice se debe 
+ejecutar el comando update-database que finalmente lo que hace es crear la base de datos
+
+Por ultimo ejecutamos la solucion la cual arranca en simultaneo los 2 proyectos tanto la Api como el proyecto web

@@ -1,0 +1,37 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Actualizar Usuario";
+}
+
+<div class="card">
+    <div class="card-header text-center">
+        Actualizar Usuario
+    </div>
+    <div class="card-body">
+
+        <form asp-action="UpUsuario" asp-controller="Home" method="post">
+            <div class="mb-2">
+                <label class="form-label">Id</label>
+                <input type="text" class="form-control form-control-sm" Enabled="false" asp-for="Id" />
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control form-control-sm" asp-for="Nombre" required/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control form-control-sm" asp-for="Contrasena" required />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control form-control-sm" asp-for="CorreoElectronico" required/>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Actualizar Usuario</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
